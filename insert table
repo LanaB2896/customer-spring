@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Successfull</h1>
+
+
+ <table class="table table-bordered">
+			<tr>
+				<th>Customer Name</th>
+				<th>Customer Address</th>
+				<th>Customer Pincode</th>
+				<th>Customer E-mail</th>
+				<th>Customer Number</th>
+				<th>Registration Date</th>
+				<th>Created By</th>
+				<th>Modified Date</th>
+		
+			</tr>
+<!-- 		</table> -->
+		
+
+		
+<!-- 		 <table class="table table-bordered"> -->
+	
+		
+			<c:forEach items="insert" var="element">
+				<tr>
+					<th>${element.customerName}</th>
+					<th>${element.customerAddress}</th>
+					<th>${element.customerPincode}</th>
+					<th>${element.customerEmail}</th>
+					<th>${element.customerNumber}</th>
+					<th>${element.registrationDate}</th>
+					<th>${element.createdBy}</th>
+					<th>${element.modifiedDate}</th>
+				</tr>
+			</c:forEach>
+		</table>
+
+</body>
+</html>
